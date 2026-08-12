@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Handyman &amp; A-to-Z Housekeeping Services | Keystone, Odessa &amp; Trinity, FL</title>
+<meta name="description" content="Reliable, honest, affordable handyman and housekeeping services proudly serving Keystone, Odessa, and Trinity, Florida. Free estimates — no job is too small. Call or text today.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A1%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#12305f;
+    --navy-deep:#0d2447;
+    --green:#4c9d2f;
+    --green-bright:#6cbf3f;
+    --green-soft:#eef6e7;
+    --navy-soft:#e9eff8;
+    --ink:#16273f;
+    --muted:#5a6a80;
+    --line:#e3e8ef;
+    --white:#ffffff;
+    --page:#f6f8f5;
+    --check-green:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%234c9d2f'/%3E%3Cpath d='M7 12.4l3.2 3.3L17 9' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    --check-navy:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%2312305f'/%3E%3Cpath d='M7 12.4l3.2 3.3L17 9' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Poppins',system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--page);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 22px}
+  .script{font-family:'Pacifico',cursive;font-weight:400}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:66px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);font-size:1.02rem;line-height:1.15;letter-spacing:-.01em}
+  .brand .mark{
+    width:38px;height:38px;flex:none;border-radius:10px;
+    background:linear-gradient(135deg,var(--navy),var(--green));
+    display:grid;place-items:center;
+  }
+  .brand small{display:block;font-weight:500;color:var(--green);font-size:.72rem}
+  .nav-cta{
+    flex:none;background:var(--green);color:#fff;font-weight:700;font-size:.9rem;
+    padding:11px 18px;border-radius:999px;white-space:nowrap;
+    box-shadow:0 4px 14px rgba(76,157,47,.35);transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .nav-cta:hover{transform:translateY(-1px);box-shadow:0 7px 18px rgba(76,157,47,.42)}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;overflow:hidden;background:var(--white);border-bottom:1px solid var(--line)}
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(6px);opacity:.14;z-index:0}
+  .hero::before{width:340px;height:340px;background:var(--green);top:-120px;right:-90px}
+  .hero::after{width:300px;height:300px;background:var(--navy);bottom:-140px;left:-110px}
+  .hero .wrap{position:relative;z-index:1;padding:58px 22px 64px;text-align:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;background:var(--navy);color:#fff;
+    font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;
+    padding:8px 18px;border-radius:999px;margin-bottom:22px;
+  }
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--green-bright)}
+  h1{font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.02;
+     font-size:clamp(2.5rem,7vw,4.6rem)}
+  h1 .roof{display:inline-block;vertical-align:middle;margin-left:6px}
+  h1 .line2{display:block;color:var(--green);font-size:clamp(2rem,6.4vw,4rem);margin-top:2px}
+  .lead{margin:20px auto 0;max-width:640px;font-size:clamp(1.05rem,2.4vw,1.28rem);color:var(--ink);font-weight:500}
+  .biz{margin-top:26px;font-weight:800;color:var(--navy);letter-spacing:-.01em;
+       font-size:clamp(1.15rem,3.4vw,1.7rem);line-height:1.25}
+  .serving{display:inline-flex;align-items:center;gap:8px;margin-top:16px;
+    background:var(--green-soft);color:var(--green);font-weight:700;
+    padding:9px 18px;border-radius:999px;font-size:.98rem}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.02rem;
+    padding:15px 26px;border-radius:999px;transition:transform .15s ease,box-shadow .15s ease}
+  .btn svg{width:20px;height:20px}
+  .btn-green{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(76,157,47,.35)}
+  .btn-green:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(76,157,47,.45)}
+  .btn-navy{background:var(--navy);color:#fff;box-shadow:0 6px 18px rgba(18,48,95,.32)}
+  .btn-navy:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(18,48,95,.42)}
+
+  /* ---------- Values strip ---------- */
+  .values{background:var(--navy);color:#fff}
+  .values .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 40px;padding:20px 22px}
+  .value{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em}
+  .value svg{width:22px;height:22px;flex:none}
+  .value span.g{color:var(--green-bright)}
+
+  /* ---------- Section shell ---------- */
+  section.block{padding:64px 0}
+  .kicker{text-align:center;color:var(--green);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.82rem}
+  h2{text-align:center;color:var(--navy);font-weight:800;letter-spacing:-.02em;
+     font-size:clamp(1.8rem,4.6vw,2.7rem);margin-top:8px}
+  .sub{text-align:center;color:var(--muted);max-width:600px;margin:14px auto 0;font-weight:500}
+
+  /* ---------- Services ---------- */
+  .services{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
+  .card{background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--line);
+        box-shadow:0 18px 44px rgba(18,48,95,.07);display:flex;flex-direction:column}
+  .card-head{display:flex;align-items:center;gap:16px;padding:24px 26px;color:#fff}
+  .card-green .card-head{background:linear-gradient(120deg,var(--green),#5fb238)}
+  .card-navy .card-head{background:linear-gradient(120deg,var(--navy),#1c4a8f)}
+  .card-head .ico{width:52px;height:52px;flex:none;background:#fff;border-radius:14px;display:grid;place-items:center}
+  .card-head .ico svg{width:28px;height:28px}
+  .card-head h3{font-size:1.28rem;font-weight:800;line-height:1.15;letter-spacing:-.01em}
+  .card-head h3 small{display:block;font-weight:500;font-size:.86rem;opacity:.92}
+  .card ul{list-style:none;padding:24px 26px 8px;display:grid;gap:13px}
+  .card li{position:relative;padding-left:36px;font-weight:500;color:var(--ink)}
+  .card li::before{content:"";position:absolute;left:0;top:2px;width:22px;height:22px;background-size:contain;background-repeat:no-repeat}
+  .card-green li::before{background-image:var(--check-green)}
+  .card-navy li::before{background-image:var(--check-navy)}
+  .card .more{padding:6px 26px 26px}
+  .card .more span{font-family:'Pacifico',cursive;font-size:1.15rem}
+  .card-green .more span{color:var(--green)}
+  .card-navy .more span{color:var(--navy)}
+
+  /* ---------- Free estimate seal ---------- */
+  .seal-band{background:var(--green-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .seal-band .wrap{display:flex;align-items:center;justify-content:center;gap:26px;padding:38px 22px;flex-wrap:wrap;text-align:center}
+  .seal{width:150px;height:150px;flex:none;border-radius:50%;background:#fff;border:3px solid var(--green);
+        display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--navy);
+        box-shadow:0 14px 30px rgba(76,157,47,.2)}
+  .seal .stars{color:var(--green);letter-spacing:3px;font-size:.8rem}
+  .seal b{font-size:1.02rem;font-weight:800;line-height:1.1;margin-top:2px}
+  .seal em{font-style:normal;font-weight:600;font-size:.74rem;color:var(--muted);margin-top:4px;max-width:110px}
+  .seal-copy{max-width:420px}
+  .seal-copy h3{color:var(--navy);font-weight:800;font-size:1.5rem;letter-spacing:-.01em}
+  .seal-copy p{color:var(--muted);font-weight:500;margin-top:6px}
+
+  /* ---------- Contact ---------- */
+  #contact{background:var(--page)}
+  .contacts{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:44px}
+  .panel{border-radius:22px;padding:34px 30px;color:#fff;position:relative;overflow:hidden}
+  .panel.green{background:linear-gradient(160deg,var(--green),#3f8a26)}
+  .panel.navy{background:linear-gradient(160deg,var(--navy),#0d2447)}
+  .panel .role{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.76rem;opacity:.85}
+  .panel .name{font-family:'Pacifico',cursive;font-size:2.1rem;margin:6px 0 2px;line-height:1.1}
+  .panel .svc-title{font-weight:700;font-size:1.02rem;opacity:.95}
+  .phone{display:inline-flex;align-items:center;gap:12px;margin-top:20px;background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.3);padding:14px 22px;border-radius:14px;
+    font-size:clamp(1.5rem,4.4vw,1.9rem);font-weight:800;letter-spacing:.01em;transition:background .15s ease,transform .15s ease}
+  .phone:hover{background:rgba(255,255,255,.24);transform:translateY(-1px)}
+  .phone svg{width:26px;height:26px;flex:none}
+  .calltext{display:inline-block;margin-top:14px;background:#fff;color:var(--navy);font-weight:700;
+    font-size:.82rem;letter-spacing:.06em;padding:7px 16px;border-radius:999px}
+  .panel.green .calltext{color:var(--green)}
+  .taglist{margin-top:20px;font-weight:600;font-size:.86rem;opacity:.92;line-height:1.7;border-top:1px solid rgba(255,255,255,.25);padding-top:16px}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--green);color:#fff;text-align:center}
+  footer .wrap{padding:26px 22px}
+  footer .banner{font-weight:800;font-size:clamp(1rem,3vw,1.3rem);letter-spacing:.01em;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+  footer .fine{margin-top:12px;font-weight:500;font-size:.82rem;opacity:.9}
+  footer .fine a{text-decoration:underline;text-underline-offset:2px}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:760px){
+    .brand small{display:none}
+    .services,.contacts{grid-template-columns:1fr}
+    section.block{padding:48px 0}
+    .hero .wrap{padding:44px 22px 50px}
+    .seal-band .wrap{gap:20px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none!important}
+  }
+  :focus-visible{outline:3px solid var(--green-bright);outline-offset:2px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Home">
+      <span class="mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+      </span>
+      <span>Handyman &amp; A-to-Z Housekeeping<small>Serving Keystone · Odessa · Trinity, FL</small></span>
+    </a>
+    <a class="nav-cta" href="#contact">Get a Free Estimate</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>We've Got You Covered!</span>
+    <h1>
+      Need Help
+      <span class="roof" aria-hidden="true">
+        <svg width="62" height="46" viewBox="0 0 62 46" fill="none" stroke="#12305f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 26 31 6l27 20"/><path d="M14 25v16h34V25"/><rect x="27" y="30" width="8" height="8" rx="1"/></svg>
+      </span>
+      <span class="line2 script">Around the House?</span>
+    </h1>
+    <p class="lead">From inside to outside, we help keep your home looking its best — <strong>your home, our care, inside &amp; out.</strong></p>
+    <p class="biz">Handyman &amp; A-to-Z Housekeeping Services</p>
+    <span class="serving">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#4c9d2f" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+      Serving Keystone, Odessa &amp; Trinity, FL
+    </span>
+    <div class="hero-ctas">
+      <a class="btn btn-green" href="#contact">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
+        Housekeeping · Sheena
+      </a>
+      <a class="btn btn-navy" href="#contact">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
+        Handyman · Anthony
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<div class="values">
+  <div class="wrap">
+    <div class="value">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#6cbf3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      <span class="g">Reliable</span>
+    </div>
+    <div class="value">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.3-9C1.2 8.8 3 5.5 6.3 5.5c1.9 0 3.2 1 3.7 2 .5-1 1.8-2 3.7-2 3.3 0 5.1 3.3 3.6 6.5C19 16.6 12 21 12 21z"/></svg>
+      <span>Honest</span>
+    </div>
+    <div class="value">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#6cbf3f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1 1-1.6 2.5-1.6s2.5.7 2.5 1.8-1 1.5-2.5 1.8-2.5.8-2.5 1.8 1 1.7 2.5 1.7 2.5-.6 2.5-1.6"/></svg>
+      <span>Affordable</span>
+    </div>
+    <div class="value">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.8L19 9l-3.5 3.6.8 5-4.3-2.4L7.7 17.6l.8-5L5 9l4.8-1.2z"/></svg>
+      <span>Detail-Oriented</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="block">
+  <div class="wrap">
+    <p class="kicker">What We Do</p>
+    <h2>Two teams, one call away</h2>
+    <p class="sub">Whether it's a spotless clean or a fix around the house, you've got trusted local help for both.</p>
+
+    <div class="services">
+      <!-- Housekeeping -->
+      <article class="card card-green">
+        <div class="card-head">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4c9d2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16"/><path d="M6 21V8l6-4 6 4v13"/><path d="M9 21v-5h6v5"/><path d="M10 4V2h4v2"/></svg>
+          </span>
+          <h3>A-to-Z Housekeeping<small>Spotless from top to bottom</small></h3>
+        </div>
+        <ul>
+          <li>Deep Cleaning</li>
+          <li>Regular Housekeeping</li>
+          <li>Move-In / Move-Out Cleaning</li>
+          <li>Kitchen &amp; Bathroom Deep Clean</li>
+          <li>Windows (Interior)</li>
+          <li>Garage &amp; Patio Cleanup</li>
+          <li>Laundry &amp; Bed Linens</li>
+          <li>Organizing &amp; Decluttering</li>
+        </ul>
+        <p class="more"><span class="script">and more!</span></p>
+      </article>
+
+      <!-- Handyman -->
+      <article class="card card-navy">
+        <div class="card-head">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#12305f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.2 5.2L3 18l3 3 6.5-6.5a4 4 0 0 0 5.2-5.2l-2.5 2.5-2.5-.7-.7-2.5z"/></svg>
+          </span>
+          <h3>Handyman Services<small>No job is too small</small></h3>
+        </div>
+        <ul>
+          <li>Minor Repairs</li>
+          <li>Furniture Assembly</li>
+          <li>Drywall Repair</li>
+          <li>Painting &amp; Touch-Ups</li>
+          <li>Door &amp; Cabinet Fixes</li>
+          <li>Fixture Installation</li>
+          <li>TV Mounting</li>
+          <li>Yard &amp; Outdoor Cleanup</li>
+        </ul>
+        <p class="more"><span class="script">and more!</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FREE ESTIMATE SEAL -->
+<div class="seal-band">
+  <div class="wrap">
+    <div class="seal" aria-hidden="true">
+      <span class="stars">★ ★ ★</span>
+      <b>FREE<br>ESTIMATES</b>
+      <em>No job is too small!</em>
+    </div>
+    <div class="seal-copy">
+      <h3>Free estimates, honest pricing</h3>
+      <p>Reach out for a no-pressure quote. Call or text either team below and we'll take care of the rest.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <p class="kicker">Get In Touch</p>
+    <h2>Call or text today</h2>
+    <p class="sub">Serving Keystone, Odessa &amp; Trinity neighbors. Tap a number to call — or text if that's easier.</p>
+
+    <div class="contacts">
+      <!-- Housekeeping contact -->
+      <div class="panel green">
+        <p class="role">Contact · A-to-Z Housekeeping</p>
+        <p class="name">Sheena Danh</p>
+        <p class="svc-title">Cleaning &amp; Housekeeping</p>
+        <a class="phone" href="tel:+18139923706">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
+          813-992-3706
+        </a>
+        <br>
+        <a class="calltext" href="sms:+18139923706">Call or Text</a>
+        <p class="taglist">Deep Clean · Regular Clean · Move-In/Out<br>Kitchen &amp; Bath · Organizing &amp; More</p>
+      </div>
+
+      <!-- Handyman contact -->
+      <div class="panel navy">
+        <p class="role">Contact · Handyman Services</p>
+        <p class="name">Anthony</p>
+        <p class="svc-title">Repairs &amp; Home Fixes</p>
+        <a class="phone" href="tel:+16697996918">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
+          669-799-6918
+        </a>
+        <br>
+        <a class="calltext" href="sms:+16697996918">Call or Text</a>
+        <p class="taglist">Repairs · Assembly · Painting · Installs<br>Maintenance · Yard Cleanup &amp; More</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <p class="banner">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-9C1.2 8.8 3 5.5 6.3 5.5c1.9 0 3.2 1 3.7 2 .5-1 1.8-2 3.7-2 3.3 0 5.1 3.3 3.6 6.5C19 16.6 12 21 12 21z"/></svg>
+      Proudly serving Keystone, Odessa &amp; Trinity neighbors!
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-9C1.2 8.8 3 5.5 6.3 5.5c1.9 0 3.2 1 3.7 2 .5-1 1.8-2 3.7-2 3.3 0 5.1 3.3 3.6 6.5C19 16.6 12 21 12 21z"/></svg>
+    </p>
+    <p class="fine">Handyman &amp; A-to-Z Housekeeping Services · Free Estimates · <a href="tel:+18139923706">813-992-3706</a> · <a href="tel:+16697996918">669-799-6918</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
