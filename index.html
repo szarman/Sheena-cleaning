@@ -22,6 +22,10 @@
     --line:#e3e8ef;
     --white:#ffffff;
     --page:#f6f8f5;
+    --red:#c8202f;
+    --red-deep:#a3162a;
+    --red-soft:#fdeeee;
+    --pine:#1f6b3a;
     --check-green:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%234c9d2f'/%3E%3Cpath d='M7 12.4l3.2 3.3L17 9' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     --check-navy:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='11' fill='%2312305f'/%3E%3Cpath d='M7 12.4l3.2 3.3L17 9' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   }
@@ -187,6 +191,49 @@
   footer .fine{margin-top:12px;font-weight:500;font-size:.82rem;opacity:.9}
   footer .fine a{text-decoration:underline;text-underline-offset:2px}
 
+  /* ---------- Holiday season ----------
+     Everything holiday lives under body.holiday-season.
+     After New Year's, remove that class from <body> to switch it all off. */
+  .holiday-only{display:none}
+  .holiday-season .holiday-only{display:block}
+  .holiday-season .regular-only{display:none}
+
+  .holiday-ribbon{background:var(--red);color:#fff;text-align:center;font-weight:700;
+    font-size:.86rem;letter-spacing:.06em;padding:8px 16px}
+  .holiday-season .hero{
+    background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='34' viewBox='0 0 120 34'%3E%3Cpath d='M0 6 Q30 26 60 6 T120 6' fill='none' stroke='%231f6b3a' stroke-width='9' stroke-linecap='round'/%3E%3Cpath d='M0 6 Q30 26 60 6 T120 6' fill='none' stroke='%234c9d2f' stroke-width='3' stroke-dasharray='2 5' stroke-linecap='round'/%3E%3Ccircle cx='30' cy='17' r='4' fill='%23c8202f'/%3E%3Ccircle cx='90' cy='-3' r='4' fill='%23c8202f'/%3E%3Ccircle cx='60' cy='8' r='2.5' fill='%23f5c542'/%3E%3C/svg%3E") top left/120px 34px repeat-x,
+      var(--white);
+  }
+  .holiday-season .hero::before{background:var(--red)}
+  .holiday-season .hero .wrap{padding-top:72px}
+  .holiday-season .eyebrow{background:var(--pine)}
+  .holiday-season .eyebrow .dot{background:#f5c542}
+  .holiday-season h1 .line2{color:var(--red)}
+  .flake{position:absolute;z-index:0;color:var(--navy);opacity:.12;pointer-events:none}
+  .flake svg{width:100%;height:100%}
+
+  .season{background:linear-gradient(180deg,#fff,var(--red-soft))}
+  .season-banner{background:var(--pine);color:#fff;border-radius:18px;padding:16px 22px;
+    display:flex;align-items:center;justify-content:center;gap:14px;text-align:center;
+    box-shadow:0 12px 30px rgba(31,107,58,.25);transform:rotate(-1deg)}
+  .season-banner .script{font-size:clamp(1.4rem,4.4vw,2.2rem);line-height:1.25}
+  .season-banner svg{width:26px;height:26px;flex:none}
+  .season-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:34px;align-items:center;margin-top:38px}
+  .season-copy p{font-size:1.08rem;color:var(--muted);font-weight:500}
+  .season-copy p strong{display:block;color:var(--navy);font-size:1.18rem;margin-bottom:8px}
+  .season-copy .no-job{margin-top:22px;font-family:'Pacifico',cursive;color:var(--red);font-size:clamp(1.4rem,4vw,1.9rem);
+    display:flex;align-items:center;gap:12px}
+  .no-job::before,.no-job::after{content:"";height:2px;width:36px;background:var(--red);border-radius:2px}
+  .here-help{background:#fff;border-radius:20px;border:1px solid var(--line);padding:26px;
+    box-shadow:0 16px 36px rgba(163,22,42,.10)}
+  .here-help h3{font-family:'Pacifico',cursive;font-weight:400;color:var(--red);font-size:1.5rem;line-height:1.2}
+  .here-help ul{list-style:none;margin-top:14px;display:grid;gap:10px}
+  .here-help li{position:relative;padding-left:34px;font-weight:700;color:var(--pine)}
+  .here-help li::before{content:"";position:absolute;left:0;top:2px;width:22px;height:22px;background:var(--check-green) no-repeat center/contain}
+  .holiday-season .seal{border-color:var(--red)}
+  .holiday-season .seal .stars{color:var(--red)}
+
   /* ---------- Responsive ---------- */
   @media (max-width:760px){
     .brand small{display:none}
@@ -194,6 +241,8 @@
     section.block{padding:48px 0}
     .hero .wrap{padding:44px 22px 50px}
     .seal-band .wrap{gap:20px}
+    .season-grid{grid-template-columns:1fr}
+    .holiday-season .flake{display:none}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
@@ -202,7 +251,10 @@
   :focus-visible{outline:3px solid var(--green-bright);outline-offset:2px;border-radius:4px}
 </style>
 </head>
-<body>
+<body class="holiday-season">
+
+<!-- HOLIDAY RIBBON -->
+<div class="holiday-ribbon holiday-only">&#10052; Book your holiday clean early &middot; Free estimates &#10052;</div>
 
 <!-- HEADER -->
 <header>
@@ -220,13 +272,17 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="wrap">
+    <span class="flake holiday-only" style="width:70px;height:70px;top:38px;left:6%" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></svg></span>
+    <span class="flake holiday-only" style="width:46px;height:46px;top:150px;right:8%" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></svg></span>
+    <span class="flake holiday-only" style="width:38px;height:38px;bottom:40px;left:14%" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></svg></span>
     <span class="eyebrow"><span class="dot"></span>We've Got You Covered!</span>
     <h1>
       Need Help
       <span class="roof" aria-hidden="true">
         <svg width="62" height="46" viewBox="0 0 62 46" fill="none" stroke="#12305f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 26 31 6l27 20"/><path d="M14 25v16h34V25"/><rect x="27" y="30" width="8" height="8" rx="1"/></svg>
       </span>
-      <span class="line2 script">Around the House?</span>
+      <span class="line2 script regular-only">Around the House?</span>
+      <span class="line2 script holiday-only">This Holiday Season?</span>
     </h1>
     <p class="lead">From inside to outside, we help keep your home looking its best — <strong>your home, our care, inside &amp; out.</strong></p>
     <p class="biz">A-to-Z Home &amp; Property Services LLC</p>
@@ -269,6 +325,33 @@
   </div>
 </div>
 
+<!-- HOLIDAY SECTION -->
+<section class="block season holiday-only">
+  <div class="wrap">
+    <div class="season-banner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></svg>
+      <span class="script">The Holidays Are Around the Corner!</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7M9 3.5l3 2.5 3-2.5M9 20.5l3-2.5 3 2.5"/></svg>
+    </div>
+    <div class="season-grid">
+      <div class="season-copy">
+        <p><strong>Need a little extra help getting your home ready for the holidays?</strong>
+        Whether you're dreaming of beautiful Christmas decorations, need help setting up your holiday lights, want your home sparkling clean for family gatherings, or have a few repairs and projects you've been putting off&hellip;</p>
+        <p class="no-job">No job is too small!</p>
+      </div>
+      <div class="here-help">
+        <h3>We're here to help! &#9825;</h3>
+        <ul>
+          <li>Reliable</li>
+          <li>Friendly</li>
+          <li>Affordable</li>
+          <li>Detail-Oriented</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section class="block">
   <div class="wrap">
@@ -294,6 +377,7 @@
           <li>Garage &amp; Patio Cleanup</li>
           <li>Laundry &amp; Bed Linens</li>
           <li>Organizing &amp; Decluttering</li>
+          <li class="holiday-only">Christmas Decorating</li>
         </ul>
         <p class="more"><span class="script">and more!</span></p>
       </article>
@@ -315,6 +399,7 @@
           <li>Fixture Installation</li>
           <li>TV Mounting</li>
           <li>Yard &amp; Outdoor Cleanup</li>
+          <li class="holiday-only">Holiday Light Setup</li>
         </ul>
         <p class="more"><span class="script">and more!</span></p>
       </article>
