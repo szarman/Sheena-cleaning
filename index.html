@@ -3,6 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js): Sheena Cleaning GA4 property -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W2ZZP80XPF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W2ZZP80XPF');
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HouseCleaningService",
+  "name": "A-to-Z Home & Property Services LLC",
+  "url": "https://www.cleanwithsheena.com/",
+  "telephone": "+1-813-992-3706",
+  "email": "Sheenahomes123@gmail.com",
+  "areaServed": [
+    {"@type": "Place", "name": "Keystone, FL"},
+    {"@type": "Place", "name": "Odessa, FL"},
+    {"@type": "Place", "name": "Trinity, FL"}
+  ],
+  "description": "Housekeeping and handyman services: deep cleaning, regular housekeeping, move-in/move-out cleaning, minor repairs and more. Free estimates."
+}
+</script>
 <title>A-to-Z Home &amp; Property Services LLC | Keystone, Odessa &amp; Trinity, FL</title>
 <meta name="description" content="A-to-Z Home & Property Services LLC — reliable, honest, affordable housekeeping and handyman services proudly serving Keystone, Odessa, and Trinity, Florida. Free estimates — no job is too small. Email, call, or text today.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A1%3C/text%3E%3C/svg%3E">
@@ -191,6 +216,31 @@
   footer .fine{margin-top:12px;font-weight:500;font-size:.82rem;opacity:.9}
   footer .fine a{text-decoration:underline;text-underline-offset:2px}
 
+  /* ---------- Contact hooks ---------- */
+  .btn-ghost{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+  .btn-ghost:hover{transform:translateY(-2px)}
+  .cta-strip{margin-top:40px;background:var(--navy);color:#fff;border-radius:20px;padding:24px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+    box-shadow:0 16px 36px rgba(18,48,95,.18)}
+  .cta-strip p{font-weight:800;font-size:1.22rem;line-height:1.3}
+  .cta-strip p small{display:block;font-weight:500;font-size:.92rem;opacity:.85}
+  .cta-strip .btns,.seal-btns{display:flex;gap:10px;flex-wrap:wrap}
+  .seal-btns{margin-top:16px;justify-content:center}
+  .cta-strip .btn,.seal-btns .btn{font-size:.95rem;padding:12px 20px}
+  .contact-row{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+  .mobile-bar{display:none}
+  @media (max-width:760px){
+    .mobile-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;
+      padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);
+      border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(18,48,95,.12)}
+    .mobile-bar a{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;color:#fff;border-radius:12px;padding:13px 10px}
+    .mobile-bar svg{width:18px;height:18px}
+    .mobile-bar .call{background:var(--green)}
+    .mobile-bar .text{background:var(--navy)}
+    body{padding-bottom:76px}
+    .cta-strip{justify-content:center;text-align:center}
+  }
+
   /* ---------- Holiday season ----------
      Everything holiday lives under body.holiday-season.
      After New Year's, remove that class from <body> to switch it all off. */
@@ -265,7 +315,7 @@
       </span>
       <span>A-to-Z Home &amp; Property Services LLC<small>Serving Keystone · Odessa · Trinity, FL</small></span>
     </a>
-    <a class="nav-cta" href="#contact">Get a Free Estimate</a>
+    <a class="nav-cta" href="#contact" data-cta="header">Get a Free Estimate</a>
   </div>
 </header>
 
@@ -291,11 +341,9 @@
       Serving Keystone, Odessa &amp; Trinity, FL
     </span>
     <div class="hero-ctas">
-      <a class="btn btn-green" href="#contact">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
-        Call or Text Sheena
-      </a>
-      <a class="btn btn-navy" href="mailto:Sheenahomes123@gmail.com">
+      <a class="btn btn-green" href="tel:+18139923706" data-cta="hero"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg> Call Sheena</a>
+      <a class="btn btn-navy" href="sms:+18139923706?&amp;body=Hi%20Sheena!%20I%27d%20like%20a%20free%20estimate%20for%20" data-cta="hero"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 1-2z"/></svg> Text Sheena</a>
+      <a class="btn btn-ghost" href="mailto:Sheenahomes123@gmail.com" data-cta="hero">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm0 2v.2l8 5 8-5V7H4zm16 2.5-8 5-8-5V17h16V9.5z"/></svg>
         Email Us
       </a>
@@ -404,6 +452,14 @@
         <p class="more"><span class="script">and more!</span></p>
       </article>
     </div>
+
+    <div class="cta-strip">
+      <p>See something you need done?<small>Text Sheena a photo of the job for a fast, free quote.</small></p>
+      <div class="btns">
+        <a class="btn btn-green" href="sms:+18139923706?&amp;body=Hi%20Sheena!%20I%27d%20like%20a%20free%20estimate%20for%20" data-cta="services"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 1-2z"/></svg> Text a Photo</a>
+        <a class="btn btn-ghost" href="tel:+18139923706" data-cta="services"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg> Call Now</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -476,7 +532,11 @@
     </div>
     <div class="seal-copy">
       <h3>Free estimates, honest pricing</h3>
-      <p>Reach out for a no-pressure quote. Call, text, or email below and we'll take care of the rest.</p>
+      <p>Reach out for a no-pressure quote. Call, text, or email and we'll take care of the rest.</p>
+      <div class="seal-btns">
+        <a class="btn btn-green" href="tel:+18139923706" data-cta="estimate-seal"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg> Call Sheena</a>
+        <a class="btn btn-navy" href="sms:+18139923706?&amp;body=Hi%20Sheena!%20I%27d%20like%20a%20free%20estimate%20for%20" data-cta="estimate-seal"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 1-2z"/></svg> Text Sheena</a>
+      </div>
     </div>
   </div>
 </div>
@@ -494,15 +554,18 @@
         <p class="role">Contact · A-to-Z Home &amp; Property Services</p>
         <p class="name">Sheena</p>
         <p class="svc-title">Housekeeping &amp; Home Services</p>
-        <a class="email" href="mailto:Sheenahomes123@gmail.com">
+        <a class="email" href="mailto:Sheenahomes123@gmail.com" data-cta="contact">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm0 2v.2l8 5 8-5V7H4zm16 2.5-8 5-8-5V17h16V9.5z"/></svg>
           Sheenahomes123@gmail.com
         </a>
-        <a class="phone" href="tel:+18139923706">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
-          813-992-3706
-        </a>
-        <p class="phone-note">Call or text anytime</p>
+        <div class="contact-row">
+          <a class="phone" href="tel:+18139923706" data-cta="contact">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg>
+            813-992-3706
+          </a>
+          <a class="phone" href="sms:+18139923706?&amp;body=Hi%20Sheena!%20I%27d%20like%20a%20free%20estimate%20for%20" data-cta="contact"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 1-2z"/></svg> Text</a>
+        </div>
+        <p class="phone-note">Call or text anytime &middot; text a photo for a fast quote</p>
         <p class="taglist">Deep Clean · Regular Clean · Move-In/Out<br>Kitchen &amp; Bath · Organizing &amp; More</p>
       </div>
     </div>
@@ -517,10 +580,30 @@
       Proudly serving Keystone, Odessa &amp; Trinity neighbors!
       <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 21s-7-4.4-9.3-9C1.2 8.8 3 5.5 6.3 5.5c1.9 0 3.2 1 3.7 2 .5-1 1.8-2 3.7-2 3.3 0 5.1 3.3 3.6 6.5C19 16.6 12 21 12 21z"/></svg>
     </p>
-    <p class="fine">A-to-Z Home &amp; Property Services LLC · Free Estimates · <a href="tel:+18139923706">813-992-3706</a> · <a href="mailto:Sheenahomes123@gmail.com">Sheenahomes123@gmail.com</a></p>
+    <p class="fine">A-to-Z Home &amp; Property Services LLC · Free Estimates · <a href="tel:+18139923706" data-cta="footer">813-992-3706</a> · <a href="mailto:Sheenahomes123@gmail.com" data-cta="footer">Sheenahomes123@gmail.com</a></p>
   </div>
 </footer>
 
+<!-- STICKY CALL / TEXT BAR (phones only) -->
+<nav class="mobile-bar" aria-label="Contact Sheena">
+  <a class="call" href="tel:+18139923706" data-cta="sticky-bar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .6 3.6 1 1 0 0 1-.25 1z"/></svg> Call</a>
+  <a class="text" href="sms:+18139923706?&amp;body=Hi%20Sheena!%20I%27d%20like%20a%20free%20estimate%20for%20" data-cta="sticky-bar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4V6a2 2 0 0 1 1-2z"/></svg> Text</a>
+</nav>
+
+<script>
+  // Contact-click tracking: each tap sends call_click / text_click / email_click / estimate_click
+  // to Google Analytics, with cta_location saying which button it was.
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+    var h = a.getAttribute('href');
+    var ev = h.indexOf('tel:') === 0 ? 'call_click'
+           : h.indexOf('sms:') === 0 ? 'text_click'
+           : h.indexOf('mailto:') === 0 ? 'email_click'
+           : h === '#contact' ? 'estimate_click' : null;
+    if (ev) gtag('event', ev, {cta_location: a.getAttribute('data-cta') || 'other'});
+  });
+</script>
 <script>
   (function(){
     document.querySelectorAll('.ba').forEach(function(ba){
